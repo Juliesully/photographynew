@@ -1,0 +1,40 @@
+<h1>Photo Catalog</h1>
+<br />
+
+<table class="catalog">
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td>
+      <div class="image">
+        <%= link_to (image_tag photo.image_url, :style => "height:100px"), photo %>
+      </div>
+    </td>
+    <td>
+      <div class="title">
+        <%= link_to photo.title, photo %>
+      </div>
+      <div class="description">
+        <%= photo.description %>
+      </div>
+      <div class="price">
+        <%= number_to_currency(photo.price, :unit =>"€ ") %>
+      </div>
+      <div class="links">
+        <% if session[:login] == 1 %>
+          <%= link_to 'Edit', edit_photo_path(photo) %>
+          <%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %>
+        <% else %>
+          <a href="/cart/<%= photo.id %>">Add to Cart</a><br /><br />
+        <% end %>
+      </div>
+    </td>
+  </tr>
+<% end %>
+
+</table>
+
+<% if session[:login] == 1 %>
+  <p><%= link_to 'New Photo', new_photo_path %></p>
+<% end %>
+
