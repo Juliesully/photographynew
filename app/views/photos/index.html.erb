@@ -21,7 +21,8 @@
         <%= number_to_currency(photo.price, :unit =>"€ ") %>
       </div>
       <div class="links">
-        <% if session[:login] == 1 %>
+        <!--% if session[:login] == 1 %-->
+        <% if current_user.admin? %>
           <%= link_to 'Edit', edit_photo_path(photo) %>
           <%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %>
         <% else %>
@@ -34,7 +35,8 @@
 
 </table>
 
-<% if session[:login] == 1 %>
+<!--% if session[:login] == 1 %-->
+<% if current_user.admin? %>
   <p><%= link_to 'New Photo', new_photo_path %></p>
 <% end %>
 

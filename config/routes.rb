@@ -1,19 +1,20 @@
 Rails.application.routes.draw do
-  get 'cart/index'
-
-  get 'site/about'
-
-  get 'site/contact'
-
+  resources :profiles
+  devise_for :users
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   get '/admin' => 'user#admin_login'
   get '/logout' => 'user#logout'
-  
-  
   get '/cart' => 'cart#index' 
+  get '/cart/:id' => 'cart#add'
   get '/cart/clear' => 'cart#clearCart' 
-    get '/cart/:id' => 'cart#add'
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
+  
+  #get 'cart/index'
+
+  #get 'site/about'
+
+  #get 'site/contact'
 
   resources :photos
 
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'items#index'
+  # root 'photos#index'
   root 'photos#index'
 
   # Example of regular route:

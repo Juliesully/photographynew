@@ -16,24 +16,41 @@
         <li><a href="/photos">Products</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/contact">Contact Us</a></li>
-        <li><a href="/admin">Login</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="/users/sign_in">Login</a></li>
+        <li><a href="/logout">Logout</a></li> 
+        <li><a href="/cart">Shopping Cart</a></li> 
+        
       </ul>
+      
     </div>
   </div>
   <div id="container">
     <div id="content">
       <p class="notice"><%= flash[:notice] %></p>
+      <p class="alert"><%= flash[:alert] %></p>
       <%= yield %>
+        <% if user_signed_in? %>
+    <div> Signed <%= current_user.email %> (<%= link_to 'Sign out',
+        destroy_user_session_path, :method => :delete %>)
+        <% else %>
+        <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in',
+        new_user_session_path %>
+        <% end %>
     </div>
     <div id="first-column">
         <div class="loginbox">
-          <h2 class="Boxheaders">Login here...</h2>
+          <h2 class="Boxheaders"><a href="/users/sign_in">Register</a></h2>
         </div>
-        <div class="searchbox">
-          <h2 class="BoxHeaders">Search Catalog</h2>
-
+        <!--<div class="searchbox">
+          <h2 class="BoxHeaders">Search Catalog</h2>-->
+  <div class="Search">  
+  <%= form_tag(photos_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Photos" %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
         </div>
+        
+        
     </div>
   </div>
   <div id="footer">
