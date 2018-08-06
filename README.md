@@ -14,5 +14,10 @@ run rake db:migrate
 photos should appear
 
 if making changes or adding photos to db store new backup with command:
-cp db/development.sqlite3 app/assets/backup/development.sqlite3 db/
+cp db/development.sqlite3 app/assets/backup/development.sqlite3 
+
+user 
+test@email.ie password Test123
+admin@email.ie
+
 
