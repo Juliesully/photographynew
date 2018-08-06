@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+select Git https://github.com/Juliesully/photographynew.git
+click ADD, click create,
+In workspace after it starts in Terminal cd photography
+type bundle install wait for gems to be installed
+type rake db:migrate
 
-Things you may want to cover:
+Run the project navigate to the url navigate to route /photos
+following command to get backup imported into db
 
-* Ruby version
+cp app/assets/backup/development.sqlite3 db/
+run rake db:migrate 
+photos should appear
 
-* System dependencies
+if making changes or adding photos to db store new backup with command:
+cp db/development.sqlite3 app/assets/backup/development.sqlite3 db/
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
