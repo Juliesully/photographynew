@@ -1,5 +1,6 @@
 <h1>Your Cart</h1>
-
+<br /><br />
+<br /><br />
 <% if @cart.empty? %>
     <p>Your Cart is empty</p>
 <% end %>
@@ -24,7 +25,7 @@
             </div>
         </td>
         <td class="title"><%= link_to photo.title, photo %></td>
-        <td class="price"><%= number_to_currency(photo.price) %></td>
+        <td class="price"><%= number_to_currency(photo.price, :unit => "€") %></td>
         <td class="quantity"><%= quantity %><br /></td>
         <td class="price"><%= number_to_currency(quantity * photo.price, :unit => "€") %></td>
     </tr>
@@ -36,11 +37,14 @@
             <div class="total">Total:</div>
         </td>
         <td>
-            <div class="price"><%= number_to_currency(total, :unit => "Eur") %></div>
+            <div class="price"><%= number_to_currency(total, :unit => "€") %></div>
         </td>
     </tr>
 </table>
 
 <p>
     <%= link_to 'Continue Shopping', :controller => :photos %>
+</p>
+<p>
+    <%= link_to 'Place Order Now', :controller => :photos %>
 </p>

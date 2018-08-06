@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   resources :profiles
   devise_for :users
+  
+  get 'cart/index'
+
+  get 'site/about'
+
+  get 'site/contact'
+  
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
   get '/admin' => 'user#admin_login'
@@ -10,11 +17,7 @@ Rails.application.routes.draw do
   get '/cart/clear' => 'cart#clearCart' 
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   
-  #get 'cart/index'
 
-  #get 'site/about'
-
-  #get 'site/contact'
 
   resources :photos
 

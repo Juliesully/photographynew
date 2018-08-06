@@ -28,7 +28,7 @@ class CartController < ApplicationController
   end
   
   def index
-  # if ther is a cart pass it to the page for display else pass empty value
+  # if there is a cart pass it to the page for display else pass empty value
       if session[:cart] then
         @cart = session[:cart]
       else 

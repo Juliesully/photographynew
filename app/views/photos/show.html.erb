@@ -1,29 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+
+<tr>
+
+    <td>
+    <p>
   <strong>Title:</strong>
   <%= @photo.title %>
-</p>
-
+    </p>
+</td>
+</tr>
+<tr>
+    <td>
 <p>
   <strong>Description:</strong>
   <%= @photo.description %>
-</p>
-
+</p></td>
+</tr>
+<tr>
+    <td>
 <p>
   <strong>Price:</strong>
   <%= @photo.price %>
 </p>
-
+</td>
+</tr>
 <p>
   <strong>Image url:</strong>
   <%= @photo.image_url %>
 </p>
-
+<tr>
+    <td>
 <p>
   <strong>Category:</strong>
   <%= @photo.category %>
 </p>
+</td>
+</tr>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
+
+<!--<%= link_to 'Edit', edit_photo_path(@photo) %> |-->
+
+       
+
 <%= link_to 'Back', photos_path %>

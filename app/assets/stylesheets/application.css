@@ -27,6 +27,10 @@ h1, h6 {
     font-weight: normal;
     color: #fff
 }
+h2 {
+    color: white;
+}
+
 div#container {
     position: relative;
     min-height: 850px;
@@ -112,14 +116,24 @@ div.searchbox {
  	-moz-border-radius:9px; /* Old Firefox */
 
 }
+div.Search {
+	margin: 5px 5px 30px 15px;
+	padding: 5px;
+	height: 25px;
+	border:5px blue solid;
+	background-image: url("/asset/Site.bg1.gif");
+ 	border-radius:9px;
+ 	-moz-border-radius:9px; /* Old Firefox */
 
+}
 div.loginbox {
 	margin: 0px 0px 30px 5px;
 	padding: 5px;
 	height: 65px;
 	border:2px blue solid;
  	border-radius:9px;
- 	background-image: url("/assets/Site/HB.jpg");
+ 	color: white;
+ 	
  	-moz-border-radius:9px; /* Old Firefox */
 
 }
@@ -152,7 +166,7 @@ div.loginbox {
 #navbar ul li a:hover          
 {
     color: white;
-    background-color: azure;         
+    background-color: blue;         
    	border:0px blue solid;
  	border-radius:9px;
  	-moz-border-radius:9px; /* Old Firefox */
@@ -253,7 +267,7 @@ div.loginbox {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	color: Azure;
-	background-color:slategrey;
+	background-color:blue;
 	border:2px silver solid;
  	border-radius:9px;
  	-moz-border-radius:9px; /* Old Firefox */
@@ -309,7 +323,7 @@ div.loginbox {
 	margin-left: 10px;
 	width: 80px;
 	height: 17px;
-	background-color: bluered;
+	background-color: blue;
 	color: white;
 	font-family:Arial, Helvetica, sans-serif;
 	text-align: center;
@@ -333,6 +347,7 @@ div.loginbox {
 .adminLinks a:hover {
 	text-decoration: none;
 	background-color: transparent;
+	color: white;
 }
 
 
@@ -542,7 +557,7 @@ div.loginbox {
 
 #cartLinks a:hover {
 	text-decoration: none;
-	color: azure;
+	color: white;
 }
 
 #cartLinks a:link {
@@ -600,7 +615,7 @@ div.loginbox {
 }
 
 /* ----------------------- Standard Styling for all CRUD pages -------------- */
-#golfForm {
+#form {
 	border-collapse:collapse;
 	margin: 0 auto;
     text-align: left;
@@ -617,7 +632,7 @@ div.loginbox {
 }
 
 #golfForm td.heading {
-	color:darkgreen;
+	color:blue;
 }
 
 #golfForm tr.notShowing {
@@ -690,6 +705,7 @@ div.loginbox {
 /* Detailed Display Edit\Back Links */
 #DisplayLinks a:hover {
 	background-color:transparent;
+	color: blue;
 }
 
 

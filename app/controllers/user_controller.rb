@@ -1,5 +1,9 @@
 class UserController < ApplicationController
     def login
+        session[:login] = 1
+        session[:cart] = nil
+        flash[:notice] = "User login Successful, cart reset !!!"
+        redirect_to :controller => :photos
     end
     
     def admin_login
