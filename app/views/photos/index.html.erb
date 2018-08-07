@@ -2,7 +2,7 @@
 <br />
 
 <table class="catalog">
-
+<% if session[:login] == 1 %>
 <% @photos.each do |photo| %>
   <tr>
     <td>

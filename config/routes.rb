@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'site/about'
 
   get 'site/contact'
+  get 'site/thanks'
   
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
@@ -16,6 +17,7 @@ Rails.application.routes.draw do
   get '/cart/:id' => 'cart#add'
   get '/cart/clear' => 'cart#clearCart' 
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
+  get '/thanks' => 'site#thanks'
   
 
 
