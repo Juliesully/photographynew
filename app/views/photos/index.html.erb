@@ -2,7 +2,7 @@
 <br />
 
 <table class="catalog">
-<% if session[:login] == 1 %>
+
 <% @photos.each do |photo| %>
   <tr>
     <td>
@@ -21,22 +21,19 @@
         <%= number_to_currency(photo.price, :unit =>"€") %>
       </div>
       <div class="links">
-        <!--% if session[:login] == 1 %-->
-        <% if current_user.admin? %>
+        
+        <% if current_user && current_user.admin? %>
           <%= link_to 'Edit', edit_photo_path(photo) %>
           <%= link_to 'Destroy', photo, :confirm => 'Are you sure?', :method => :delete %>
         <% else %>
           <a href="/cart/<%= photo.id %>">Add to Cart</a><br /><br />
         <% end %>
+       <% end %>
       </div>
     </td>
   </tr>
-<% end %>
+ </table>
 
-</table>
-
-<!--% if session[:login] == 1 %-->
-<% if current_user.admin? %>
+<% if current_user && current_user.admin? %>
   <p><%= link_to 'New Photo', new_photo_path %></p>
 <% end %>
-

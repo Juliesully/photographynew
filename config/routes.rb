@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
-  get '/admin' => 'user#admin_login'
+  get '/users/signin' => 'user#login'
   get '/logout' => 'user#logout'
   get '/cart' => 'cart#index' 
   get '/cart/:id' => 'cart#add'

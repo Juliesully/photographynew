@@ -1,8 +1,7 @@
 class PhotosController < ApplicationController
-before_filter :authenticate_user!
-before_filter :ensure_admin, :only => [:edit, :destroy]
-before_action :set_photo, only: [:show, :update]
-
+before_filter :authenticate_user!, :except => [:index, :show] 
+before_filter :ensure_admin, :only => [:edit, :destroy, :update, :new]
+before_action :set_photo, only: [:show, :edit, :update, :destroy]
 
   # GET /photos
   # GET /photos.json
@@ -19,8 +18,7 @@ before_action :set_photo, only: [:show, :update]
   # GET /photos/1.json
   def show
   end
-before_filter :authenticate_user!
-before_filter :ensure_admin, :only => [:edit, :destroy]
+
   # GET /photos/new
   def new
     @photo = Photo.new
@@ -40,7 +38,7 @@ before_filter :ensure_admin, :only => [:edit, :destroy]
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: @photo }
       else
-        format.html { render :new } 
+        format.html { render :new }
         format.json { render json: @photo.errors, status: :unprocessable_entity }
       end
     end

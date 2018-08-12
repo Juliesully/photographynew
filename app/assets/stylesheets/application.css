@@ -59,7 +59,7 @@ div#content {
     /*background: rgb(240, 240, 240);*/
     background-image: url("/assets/Site/BookHeader.jpg");
     border: 1px solid gray;
-    min-height: 850px;
+    min-height: 950px;
     width: 700px;
 }
 div#header,
@@ -87,7 +87,7 @@ div#menu {
 }
 div#header {
     border-bottom: none;
-    background-image: url("/assets/Site/BookHeader.jpg");
+    background-image: url("/assets/Site/Header.jpg");
     width: 1024px;
     height: 170px;
 }
@@ -201,8 +201,8 @@ div.loginbox {
 /* --------- Product Detailed Display -------------------*/
 #imageDisplay
 {
-	width: 350px;
-	height: 370px;
+	width: 450px;
+	height: 470px;
 	border: 2px black solid;
 	background-color:black;	
 	float:left;
@@ -214,7 +214,7 @@ div.loginbox {
 	text-align: left;
 	background-color:black;
 	height: 100%;
-	width: 300px;
+	width: 400px;
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -240,13 +240,6 @@ div.loginbox {
 	margin-bottom: 10px;
 }
 
-#clubInfo {
-	float: left;
-	width: 308px;
-	margin-left: 10px;
-	padding-left: 5px;
-	border: 2px black solid;
-}
 
 
 #largeDisplay img {
@@ -280,10 +273,10 @@ div.loginbox {
 .catalogList {
 	position: relative;
 	float: left;
-	margin: 10px;
-	border: 2px black solid;
-	width: 208px;
-	/*height:230px;*/
+	margin: 40px;
+	border: 5px black solid;
+	width: 408px;
+	height:430px;
 	overflow:visible;
 	
 	
@@ -301,14 +294,15 @@ div.loginbox {
 	margin-left:2px;
 	margin-right:2px;
 	width: 98%;
-	height: 130px;
+	height: 230px;
+	width: 230px;
 }
 
 .MoreDetails {
 	float:left;
 	margin-left: 10px;
-	width: 70px;
-	height: 17px;
+	width: 100px;
+	height: 25px;
 	background-color:darkolivegreen;
 	color: white;
 	font-family:Arial, Helvetica, sans-serif;
@@ -351,42 +345,7 @@ div.loginbox {
 }
 
 
-/*
-.adminLinks a {
-	background-color: seagreen;
-	padding: 0px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-left: 5px;
-	padding-right: 5px;
-	margin: 2px;
-	font-size: 10px;
-	border: 2px red solid;
-	border-radius:5px;
- 	-moz-border-radius:5px;
-}
 
-.adminLinks a:hover {
-	text-decoration: none;
-	color: blue;
-}
-
-.adminLinks a:link {
-	text-decoration: none;
-	color: azure;
-}
-
-.adminLinks a:active {
-	text-decoration: none;
-	color: azure;
-}
-
-.adminLinks a:visited {
-	text-decoration: none;
-	color: azure;
-}
-
-*/
 
 .catalogPrice {
 	text-align:center;
@@ -419,76 +378,8 @@ div.loginbox {
 	height: 25px;
 }
 
-/* ------------------- Drop down BOxex for Category and Brand ---------------*/
-#sortTerms {
-	float: left;
-	font-family:Arial, Helvetica, sans-serif;
-	font-size: 18px;
-}
 
-#sortBoxes {
-	float: right
-}
 
-/* ---------------------- Whats in the bag ------------------------------ */
-#WhatsInTheBag {
-	position: relative;
-	width: 95%;
-	margin-left: 15px;
-	overflow: auto;
-	border: 2px red solid;
-	border-radius:9px;
- 	-moz-border-radius:9px; /* Old Firefox */
-}
-
-#editClubsLink {
-	position:absolute;
-	margin: 5px;
-	right: 0;
-	top: 0;
-}
-
-#editClubsLink img {
-	border: 0;
-}
-
-#editClubsLink a:hover {
-	background-color:transparent;
-}
-
-#BagList {
-
-}
-
-#BagList h2 {
-	color: forestgreen;
-	margin-top: 10px;
-}
-
-#BagImage {
-	float:left;	
-}
-
-#AddClub {
-	width: 91%;
-	margin-left: 15px;
-	margin-top: 10px;
-	padding: 15px;
-	overflow: auto;
-	border: 2px silver solid;
-	border-radius:9px;
- 	-moz-border-radius:9px; /* Old Firefox */
-}
-
-.listAdmin {
-	visibility: hidden;
-	display: none;
-}
-
-#listAdmin {
-	visibility: hidden;
-	
-}
 
 /* ------------- Profile Info Display ---------------- */
 #profileInfo {
@@ -523,9 +414,7 @@ div.loginbox {
 
 
 
-#BagList ul {
-	list-style-type: none;
-}
+
 
 /* -------------------- Cart ------------------- */
 .cart {
@@ -627,18 +516,6 @@ div.loginbox {
 	text-align: center;
 }
 
-#golfForm td {
-	padding:3px;
-}
-
-#golfForm td.heading {
-	color:blue;
-}
-
-#golfForm tr.notShowing {
-	visibility: hidden;
-	display: none;
-}
 
 /* -------------------- Login Page --------------------------- */
 
@@ -705,7 +582,7 @@ div.loginbox {
 /* Detailed Display Edit\Back Links */
 #DisplayLinks a:hover {
 	background-color:transparent;
-	color: blue;
+	color: darkblue;
 }
 
 
