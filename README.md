@@ -2,22 +2,23 @@
 
 select Git https://github.com/Juliesully/photographynew.git
 click ADD, click create,
-In workspace after it starts in Terminal cd photography
+In workspace after it starts in Terminal cd photographynew
 type bundle install wait for gems to be installed
-type rake db:migrate
+cp app/assets/backup/c/development.sqlite3 db/
+run rake db:migrate 
 
 Run the project navigate to the url navigate to route /photos
 following command to get backup imported into db
 
-cp app/assets/backup/development.sqlite3 db/
-run rake db:migrate 
-photos should appear
-
 if making changes or adding photos to db store new backup with command:
 cp db/development.sqlite3 app/assets/backup/development.sqlite3 
 
-user 
+users 
 test@email.ie password Test123
-admin@email.ie
+admin@email.ie password Burlo1
+
+Demo video available on youtube with following link:
+https://youtu.be/IwDhFFu2l2s
+
 
 
