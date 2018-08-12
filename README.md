@@ -18,7 +18,7 @@ test@email.ie password Test123
 admin@email.ie password Burlo1
 
 Demo video available on youtube with following link:
-https://youtu.be/IwDhFFu2l2s
+https://www.youtube.com/watch?v=IwDhFFu2l2s&t=3s
 
 
 
