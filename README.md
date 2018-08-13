@@ -8,7 +8,6 @@ cp app/assets/backup/c/development.sqlite3 db/
 run rake db:migrate 
 
 Run the project navigate to the url navigate to route /photos
-following command to get backup imported into db
 
 if making changes or adding photos to db store new backup with command:
 cp db/development.sqlite3 app/assets/backup/development.sqlite3 
